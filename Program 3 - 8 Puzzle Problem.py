@@ -88,6 +88,7 @@ def a_star(initial_state, goal_state):
         closed_set.add(tuple(map(tuple, current_state)))
 
         print_data(current_state)
+        print()
 
         if current_state == goal_state:
             print("System has reached the goal state")
