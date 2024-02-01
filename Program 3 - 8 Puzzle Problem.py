@@ -72,9 +72,11 @@ def a_star(initial_state, goal_state):
 
     # The open set is a priority queue which has the elements in the following format:
     # (f, g, current_state, moves)
+    # it contains those states that are scheduled for exploration
     open_set = [(calculate_heuristic(initial_state, goal_state), 0, initial_state, [])]
 
     # closed set is the set of states that have already been visited
+    # these states are not revisited
     closed_set = set()
 
     while open_set:
